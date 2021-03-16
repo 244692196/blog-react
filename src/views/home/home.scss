@@ -1,0 +1,14 @@
+$primary-color: #999;
+$bgc:#fff;
+#bolg {
+    .b_head {
+        background-color: $bgc;
+        .b_head_con {
+            color: $primary-color;
+            .b_h_con_menu{
+                background-color: $bgc;
+                border: 0;
+            }
+        }
+    }
+}

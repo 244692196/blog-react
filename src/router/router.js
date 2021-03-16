@@ -12,4 +12,10 @@ const routes = [
         path:'/login',
         component:Login
     },
+    {
+        path:'/register',
+        component:Register
+    }
 ]
+
+module.exports = routes
