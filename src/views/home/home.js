@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import './home.scss';
+import '../../static/css/home.scss';
 import { Layout, Row, Col, Menu } from 'antd';
+import { Link } from 'react-router-dom'
 const { Header } = Layout;
 class home extends Component {
     render() {
@@ -24,7 +25,10 @@ class home extends Component {
                                 <Breadcrumb.Item>登录</Breadcrumb.Item>
                                 <Breadcrumb.Item>注册</Breadcrumb.Item>
                             </Breadcrumb> */}
-                            登录 / 注册
+
+                            <Link to="/login">登录 /</Link>
+                            <Link to="/register"> 注册 </Link>
+
                         </Col>
                     </Row>
                 </Header>
