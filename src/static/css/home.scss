@@ -1,13 +1,41 @@
-$primary-color: #999;
-$bgc:#fff;
+@import "./common.scss";
 #bolg {
     .b_head {
+
         background-color: $bgc;
+        position: fixed;
+        top: 0;
+        width: 100vw;
+
         .b_head_con {
+
             color: $primary-color;
-            .b_h_con_menu{
-                background-color: $bgc;
-                border: 0;
+
+            .YCZ_Blog {
+                color: $primary-color;
+                font-size: $px*1.6;
+                font-weight: bold;
+            }
+
+            .b_h_con_menu {
+                display: flex;
+                justify-content: flex-end;
+                padding-right: 100px;
+
+                a {
+                    font-size: $px*1.4;
+                    color: #555;
+                    margin-left: 60px;
+                }
+            }
+
+            a {
+                color: $primary-color;
+                font-size: $px*1.3;
+
+                &:hover {
+                    color: coral
+                }
             }
         }
     }

@@ -1,0 +1,18 @@
+@import "./common.scss";
+
+#login,
+#register {
+    width: 100vw;
+    padding-top: $clear+100px;
+    box-sizing: border-box;
+
+    .login_con,
+    .register_con {
+        width: 360px;
+        height: 360px;
+        background-color: $bgc;
+        margin: auto;
+        padding: 100px 20px;
+        border-radius: 20px;
+    }
+}
