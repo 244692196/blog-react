@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import '../../static/css/home.scss';
-import { Layout } from 'antd';
 import Head from './head'
 import routes from '../../router/router'
 import {
@@ -8,16 +7,13 @@ import {
   Route,
   Switch
 } from 'react-router-dom'
-const { Header } = Layout;
 class home extends Component {
     render() {
         return (
             <BrowserRouter>
-                <Layout id={'bolg'}>
-                    <Header className={'b_head'}>
-                        <Head></Head>
-                    </Header>
-                </Layout>
+                <div id={'blog'}>
+                    <Head></Head>
+                </div>
                 {/* 路由 */}
                 <Switch>
                     {

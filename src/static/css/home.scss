@@ -1,31 +1,80 @@
 @import "./common.scss";
-#bolg {
-    .b_head {
 
-        background-color: $bgc;
-        position: fixed;
-        top: 0;
-        width: 100vw;
+#blog {
+    box-sizing: border-box;
+    padding-top: 60px;
+
+    .b_head {
+        display: flex;
+        max-width: 1060px;
+        height: 60px;
+        margin: auto;
 
         .b_head_con {
-
+            display: flex;
+            align-items: center;
+            min-width: 400px;
+            height: 100%;
+            padding: 0 60px;
             color: $primary-color;
+            line-height: 60px;
 
-            .YCZ_Blog {
-                color: $primary-color;
-                font-size: $px*1.6;
-                font-weight: bold;
+            .b_h_con_left {
+                .YCZ_blog {
+                    color: $primary-color;
+                    font-size: $px*1.6;
+                    font-weight: bold;
+                }
             }
 
-            .b_h_con_menu {
-                display: flex;
-                justify-content: flex-end;
-                padding-right: 100px;
+            .b_h_con_right {
+                width: 400px;
+                white-space: nowrap;
+                overflow: hidden;
 
                 a {
                     font-size: $px*1.4;
                     color: #555;
                     margin-left: 60px;
+                }
+            }
+
+            .b_h_con_end {
+                width: 50px;
+                height: 50px;
+                position: relative;
+                z-index: 100;
+
+                >div {
+                    content: '';
+                    background: #53555c;
+                    position: absolute;
+                    right: 15px;
+                    width: 20px;
+                    height: 2px;
+
+                    &::after,
+                    &::before {
+                        content: '';
+                        background: #53555c;
+                        position: absolute;
+                        width: 20px;
+                        height: 2px;
+                    }
+
+                    top: 50%;
+
+                    &::after {
+                        transform: translateY(5px);
+                    }
+
+                    &::before {
+                        transform: translateY(-5px);
+                    }
+
+                    &:hover>div::before {
+                        transform: translateY(0) rotate(90deg);
+                    }
                 }
             }
 
@@ -38,5 +87,6 @@
                 }
             }
         }
+
     }
 }

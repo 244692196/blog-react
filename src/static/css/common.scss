@@ -1,4 +1,11 @@
 $primary-color: #777;
-$bgc:#fff;
+$bgc:#F1F2F9;
 $px:12px;
-$clear:64px;  //固定定位高度
+$clear:64px; //固定定位高度
+
+.ycz-card-default {
+    background: #fff;
+    color: #666;
+    box-shadow: 0 2px 10px #ccc;
+    border-radius: 8px;
+}

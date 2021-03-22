@@ -4,6 +4,16 @@ import { UserOutlined, ToolOutlined } from '@ant-design/icons';
 import '../../static/css/userState.scss'
 
 class register extends Component {
+    constructor() {
+        super();
+        //要使用this，必须要有super
+        this.state = {
+
+        }
+    }
+    registerFn = () => {
+        
+    }
     render() {
         return (
             <div id={'register'}>
@@ -15,6 +25,7 @@ class register extends Component {
                     <Input
                         placeholder="密码"
                         prefix={<ToolOutlined />} />
+                        
                 </div>
             </div>
         );
