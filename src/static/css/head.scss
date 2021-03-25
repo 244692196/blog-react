@@ -1,0 +1,150 @@
+@import "./common.scss";
+
+// 主页面头部css
+.b_head {
+    display: flex;
+    max-width: 1060px;
+    height: 60px;
+
+    .b_head_con {
+        height: 60px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        min-width: 400px;
+        padding: 0 40px 0 20px;
+        color: $primary-color;
+        line-height: 60px;
+
+        .b_h_con_left {
+            position: relative;
+            overflow: hidden;
+
+            .YCZ_blog {
+                color: $primary-color;
+                font-size: $px*1.6;
+                font-weight: bold;
+
+                &::after {
+                    position: absolute;
+                    right: 30px;
+                    content: '';
+                    width: 6px;
+                    height: 60px;
+                    background-color: rgba(255, 255, 255, .5);
+                    transform: rotate(40deg);
+                    box-shadow: 0 0 10px #fff;
+                    animation: run 1.5s infinite;
+                }
+            }
+        }
+
+        .b_h_con_right {
+            transition: .4s;
+            width: 1px;
+            white-space: nowrap;
+            overflow: hidden;
+
+            a {
+                font-size: $px*1.2;
+                color: #666;
+                margin-left: 40px;
+            }
+        }
+
+        .b_h_c_long {
+            width: 450px;
+        }
+
+        .b_h_c_show {
+            width: auto !important;
+            overflow: visible;
+        }
+
+        .b_h_con_end {
+            cursor: pointer;
+            width: 20px;
+            height: 50px;
+            position: relative;
+            z-index: 100;
+            display: flex;
+            justify-content: center;
+
+            >div {
+                position: absolute;
+
+                &::after,
+                &::before {
+                    content: '';
+                    transition: all 0.3s cubic-bezier(0, 0.99, 0.2, 1);
+                    background: #53555c;
+                    position: absolute;
+                    width: 20px;
+                    height: 2px;
+                }
+
+                top: 50%;
+            }
+        }
+
+        .b_h_c_end_T {
+            >div {
+                &::after {
+                    transform-origin: 50%;
+                    transform: rotate(45deg);
+                }
+
+                &::before {
+                    transform-origin: 50%;
+                    transform: rotate(-45deg);
+                }
+            }
+
+            &:hover>div::after,
+            &:hover>div::before {
+                transform: translateY(0) rotate(0);
+            }
+        }
+
+        .b_h_c_end_F {
+            div {
+                background: #53555c;
+                width: 20px;
+                height: 2px;
+
+                &::after {
+                    transform: translateY(6px);
+                }
+
+                &::before {
+                    transform: translateY(-6px);
+                }
+            }
+
+            &:hover>div::after,
+            &:hover>div::before {
+                transform: translateY(0) rotate(90deg);
+            }
+        }
+
+        .b_h_c_end_no {
+            display: none;
+        }
+
+        a {
+            color: $primary-color;
+            font-size: $px*1.3;
+
+            &:hover {
+                color: #222;
+            }
+        }
+    }
+
+    .b_head_con_change {
+        width: 1060px;
+        height: 60px;
+        position: fixed;
+        transition: .4s;
+    }
+}
