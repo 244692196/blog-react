@@ -1,10 +1,11 @@
 import Home from '../views/home/home';
 import Login from '../views/login/login';
 import Register from '../views/register/register';
+import About from '../views/about/about';
 
 const routes = [
     {
-        path:'/',
+        path:'/home',
         component:Home,
         exact:true
     },
@@ -15,6 +16,10 @@ const routes = [
     {
         path:'/register',
         component:Register
+    },
+    {
+        path:'/about',
+        component:About
     }
 ]
 

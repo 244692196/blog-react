@@ -1,47 +1,35 @@
 import React, { Component } from 'react';
 import '../../static/css/home.scss';
-import Head from './head'
-import routes from '../../router/router'
-import {
-  BrowserRouter,
-  Route,
-  Switch
-} from 'react-router-dom'
+
 class home extends Component {
+    constructor(props) {
+        super()
+    }
+    componentDidMount () {
+        console.log(this.props.location.pathname);
+    }
     render() {
         return (
-            <BrowserRouter>
-                <div id={'blog'}>
-                    <Head></Head>
+            <div className={'b_content'}>
+                <div className={'b_con_left'}>
+                    <ul className={'b_con_left_list'}>
+                        <li className={`${'b_con_l_list_li'} ${'ycz-card-default'}`}></li>
+                        <li className={`${'b_con_l_list_li'} ${'ycz-card-default'}`}></li>
+                        <li className={`${'b_con_l_list_li'} ${'ycz-card-default'}`}></li>
+                        <li className={`${'b_con_l_list_li'} ${'ycz-card-default'}`}></li>
+                        <li className={`${'b_con_l_list_li'} ${'ycz-card-default'}`}></li>
+                        <li className={`${'b_con_l_list_li'} ${'ycz-card-default'}`}></li>
+                        <li className={`${'b_con_l_list_li'} ${'ycz-card-default'}`}></li>
+                        <li className={`${'b_con_l_list_li'} ${'ycz-card-default'}`}></li>
+                    </ul>
                 </div>
-                {/* 路由 */}
-                <Switch>
-                    {
-                        routes.map((item, index) => {
-                            console.log(item);
-                            if (item.exact) {
-                                return (
-                                    <Route key={index} exact={item.exact} path={item.path} component={item.component}></Route>
-                                )
-                            } else {
-                                return (
-                                    <Route
-                                        key={index}
-                                        path={item.path}
-                                        component={item.component}
-                                    //路由嵌套，父组件向子组件传值方法
-                                    // render={
-                                    //   (props) => {
-                                    //     return <item.component data={item.children} />
-                                    //   }
-                                    // }
-                                    ></Route>
-                                )
-                            }
-                        })
-                    }
-                </Switch>
-            </BrowserRouter>
+                <div className={'b_con_right'}>
+                    <div className={'b_con_right_con'}>
+                        <div className={`${'b_con_r_con_item'} ${'ycz-card-default'}`}></div>
+                        <div className={`${'b_con_r_con_item'} ${'ycz-card-default'}`}></div>
+                    </div>
+                </div>
+            </div>
         );
     }
 }
